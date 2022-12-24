@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "backend for ecommerce website",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gautam033k/Ecommerce.git#master"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gautam033k/Ecommerce/issues"
+  },
+  "homepage": "https://github.com/Gautam033k/Ecommerce/tree/master#readme"
+}
