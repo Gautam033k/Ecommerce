@@ -4,6 +4,7 @@ import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Product from '../components/Products';
+import { Helmet } from 'react-helmet-async';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -42,6 +43,9 @@ function HomeScreen() {
 
   return (
     <div>
+      <Helmet>
+        <title>amazon</title>
+      </Helmet>
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (

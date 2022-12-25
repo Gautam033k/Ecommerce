@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      name: 'Nike slin Shirt',
+      name: 'Nike slim Shirt',
       slug: 'nike-slim-shirt',
       category: 'shirts',
       image: '/images/p1.jpg',
@@ -18,7 +18,7 @@ const data = {
       category: 'shirts',
       image: '/images/p2.jpg',
       price: 590,
-      countInStock: 20,
+      countInStock: 0,
       brand: 'Adidas',
       rating: 4.0,
       numReviews: 10,
