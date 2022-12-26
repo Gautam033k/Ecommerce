@@ -9,13 +9,12 @@ productRoutes.get('/', async (req, res) => {
 });
 
 productRoutes.use('/slug/:slug', async (req, res) => {
-  const product = Product.findOne({ slug: req.params.slug });
+  const product = await Product.findOne({ slug: req.params.slug });
   if (product) {
     res.send(product);
   } else {
     res.status(404).send({ message: 'product Not found' });
   }
-  res.status(200).json(data.products);
 });
 
 productRoutes.get('/:id', async (req, res) => {
