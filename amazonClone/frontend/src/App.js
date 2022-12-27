@@ -16,6 +16,7 @@ import CartScreen from './Screen/CartScreen.js';
 import SignInScreen from './Screen/SignInScreen.js';
 import ShippingAdd from './Screen/ShippingAdd.js';
 import SignUpScreen from './Screen/SignUpScreen';
+import PaymentMethodScreen from './Screen/PaymentMethodScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -25,6 +26,7 @@ function App() {
     ctxDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress');
+    localStorage.removeItem('paymentMethod');
   };
 
   return (
@@ -80,6 +82,7 @@ function App() {
               <Route path="/signin" element={<SignInScreen />} />
               <Route path="/signup" element={<SignUpScreen />} />
               <Route path="/shipping" element={<ShippingAdd />} />
+              <Route path="/payment" element={<PaymentMethodScreen />} />
               <Route path="/" element={<HomeScreen />} />
             </Routes>
           </Container>
