@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import seedRouter from './routes/seedRoutes.js';
 import productRoutes from './routes/productRoute.js';
 import userRouter from './routes/userRoutes.js';
+import orderRouter from './routes/orderRoute.js';
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/seed', seedRouter);
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRouter);
+app.use('/api/orders', orderRouter);
 
 const port = process.env.PORT || 5000;
 

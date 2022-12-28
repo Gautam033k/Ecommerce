@@ -18,6 +18,8 @@ import ShippingAdd from './Screen/ShippingAdd.js';
 import SignUpScreen from './Screen/SignUpScreen';
 import PaymentMethodScreen from './Screen/PaymentMethodScreen';
 import PlaceOrderScreen from './Screen/PlaceOrderScreen';
+import NavBar from './components/NavBar.js';
+import Announcement from './components/Announcement.js';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -35,7 +37,17 @@ function App() {
       <div className="d-flex flex-column site-Container">
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="dark" variant="dark">
+          {/* <div className="Navbar-container">
+            <div>
+              <div>Left</div>
+              <div>Center</div>
+              <div>Right</div>
+            </div>
+          </div> */}
+          <Announcement />
+          <NavBar />
+
+          {/* <Navbar bg="dark" variant="dark">
             <Container>
               <LinkContainer to="/">
                 <Navbar.Brand>amazon</Navbar.Brand>
@@ -73,7 +85,7 @@ function App() {
                 )}
               </Nav>
             </Container>
-          </Navbar>
+          </Navbar> */}
         </header>
         <main>
           <Container className="mt-3">
